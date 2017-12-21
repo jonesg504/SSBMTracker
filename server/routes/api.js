@@ -5,13 +5,14 @@ const ObjectID = require('mongodb').ObjectID;
 
 // Connect
 const connection = (closure) => {
-    return MongoClient.connect('mongodb://localhost:27017/mean', (err, db) => {
+    return MongoClient.connect('mongodb://jonesg504:Ff12345MC@ec2-34-227-93-43.compute-1.amazonaws.com:27017/dummyDB', (err, db) => {
         if (err) return console.log(err);
 
         closure(db);
     });
 };
-
+//jonesg504:Ff12345MC@ec2-34-227-93-43.compute-1.amazonaws.com:27017/dummyDB
+//mongodb://localhost:27017/mean
 // Error handling
 const sendError = (err, res) => {
     response.status = 501;
